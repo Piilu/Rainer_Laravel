@@ -114,4 +114,9 @@ class PostController extends Controller
         }
         throw(new AuthorizationException());
     }
+
+    public function details(Post $post)
+    {
+        return view('admin.posts.show', compact('post'));
+    }
 }
